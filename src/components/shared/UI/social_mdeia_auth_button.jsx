@@ -1,6 +1,7 @@
-const SocialMediaAuthButton = ({ icon, text }) => {
+const SocialMediaAuthButton = ({ icon, text, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className="bg-white rounded-xl text-darkBlue  text-2xl font-bold border border-gray py-4 "
       style={{
         fontSize: "18px",
