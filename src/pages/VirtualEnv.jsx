@@ -40,7 +40,7 @@ const VirtualEnv = () => {
           window.dispatchEvent(new CustomEvent("addCharacter"));
         }}
       >
-        Add random character
+        {"Add random character (green, blue or yellow)"}
       </button>
       {/* <button
         className="text-4xl text-black border ml-4"
@@ -54,6 +54,10 @@ const VirtualEnv = () => {
       >
         Move random character
       </button> */}
+
+      <h4 className=" text-black">
+        Move the purple character by clicking on the desired place{" "}
+      </h4>
       <div id="phaser-game" />
     </>
   );
