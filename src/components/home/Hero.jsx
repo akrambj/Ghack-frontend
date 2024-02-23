@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full h-screen overflow-hidden flex flex-col gap-1 pb-10 items-center justify-center"
+      className="relative w-full h-screen overflow-hidden flex flex-col gap-1 pb-10 items-center justify-end"
     >
       <div className="flex flex-col justify-center items-center gap-5 ">
         <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between flex-wrap">
