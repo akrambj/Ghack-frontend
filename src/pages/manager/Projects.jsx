@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import WorkspaceManager from "../../components/manager/projects/WorkspaceManager";
 import AddProject from "../../components/manager/projects/add/AddProject";
+import ManagerFooter from "../../components/manager/shared/footer/ManagerFooter";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -46,13 +47,14 @@ const Projects = () => {
           Add project
         </button>
       </div>
-      <div className="flex items-center justify-center gap-4 flex-wrap w-full">
+      <div className="flex items-center justify-start ml-auto w-[95%] gap-4 flex-wrap ">
         {loading && <div className="spinner"></div>}
         {projects.map((project) => (
           <WorkspaceManager key={project.id} project={project} />
         ))}
       </div>
       {addProject && <AddProject setAddProject={setAddProject} />}
+      <ManagerFooter />
     </section>
   );
 };

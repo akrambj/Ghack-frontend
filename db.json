@@ -61,5 +61,108 @@
       "type": "owner",
       "id": 7
     }
+  ],
+
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "role": "manager",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 15,
+      "action": "Review"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 20,
+      "action": "Approve"
+    },
+    {
+      "id": 3,
+      "name": "David Johnson",
+      "email": "david.johnson@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 10,
+      "action": "Implement"
+    },
+    {
+      "id": 4,
+      "name": "Emily Brown",
+      "email": "emily.brown@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 8,
+      "action": "Design"
+    },
+    {
+      "id": 5,
+      "name": "Michael Wilson",
+      "email": "michael.wilson@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 25,
+      "action": "Authorize"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Lee",
+      "email": "sarah.lee@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 18,
+      "action": "Coordinate"
+    },
+    {
+      "id": 7,
+      "name": "Kevin Garcia",
+      "email": "kevin.garcia@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 12,
+      "action": "Code"
+    },
+    {
+      "id": 8,
+      "name": "Olivia Martinez",
+      "email": "olivia.martinez@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 14,
+      "action": "Assist"
+    },
+    {
+      "id": 9,
+      "name": "Daniel Taylor",
+      "email": "daniel.taylor@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 22,
+      "action": "Strategize"
+    },
+    {
+      "id": 10,
+      "name": "Ava Rodriguez",
+      "email": "ava.rodriguez@example.com",
+      "role": "participant",
+      "activity": "4h/day",
+      "files": 2,
+      "tasks_done": 16,
+      "action": "Coordinate"
+    }
   ]
 }

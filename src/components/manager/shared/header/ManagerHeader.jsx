@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import profile from "../../../../assets/imgs/manager/header/profile.png";
 
 const ManagerHeader = () => {
   const [theIndex, setTheIndex] = useState(0);
   const [menu, setMenu] = useState(false);
   const menuLinks = [
-    { name: "projects" },
-    { name: "upgrade" },
-    { name: "support" },
+    { name: "projects", link: "/dashboard" },
+    { name: "upgrade", link: "/upgrade" },
+    { name: "support", link: "/support" },
   ];
   return (
     <header className="z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
@@ -21,7 +21,8 @@ const ManagerHeader = () => {
         <ul className="flex items-center gap-10">
           {menuLinks.map((menu, index) => (
             <li key={index} className="">
-              <a
+              <NavLink
+                to={menu.link}
                 onClick={() => setTheIndex(index)}
                 className={`text-lg capitalize cursor-pointer ${
                   index === theIndex
@@ -30,7 +31,7 @@ const ManagerHeader = () => {
                 }  hover:text-[#006BFF] duration-300 transition-all ease-in`}
               >
                 {menu.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
