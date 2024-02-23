@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import profile from "../../../../assets/imgs/manager/header/profile.png";
 
 const ManagerHeader = () => {
-  const [theIndex, setTheIndex] = useState(1);
+  const [theIndex, setTheIndex] = useState(0);
   const [menu, setMenu] = useState(false);
   const menuLinks = [
-    { name: "projects", links: "#" },
-    { name: "upgrade", links: "#" },
-    { name: "support", links: "#" },
+    { name: "projects" },
+    { name: "upgrade" },
+    { name: "support" },
   ];
   return (
     <header className="z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
@@ -23,12 +23,11 @@ const ManagerHeader = () => {
             <li key={index} className="">
               <a
                 onClick={() => setTheIndex(index)}
-                className={`text-lg capitalize ${
+                className={`text-lg capitalize cursor-pointer ${
                   index === theIndex
                     ? "text-[#006BFF] font-bold"
                     : "font-semibold"
                 }  hover:text-[#006BFF] duration-300 transition-all ease-in`}
-                href={menu.links}
               >
                 {menu.name}
               </a>

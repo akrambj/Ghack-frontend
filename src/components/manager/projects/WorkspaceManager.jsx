@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import groups from "../../../assets/imgs/services/groups.png";
 const WorkspaceManager = ({ project }) => {
   const getColor = () => {
@@ -12,9 +13,18 @@ const WorkspaceManager = ({ project }) => {
     return backgroundColor;
   };
 
+  const navigate = useNavigate();
+
+  const handleNaviagtion = () => {
+    navigate(`projects/${project.id}`);
+  };
+
   const bg = getColor();
   return (
-    <div className="w-[30%] bg-[#FCFCFD] drop-shadow-md shadow-md h-[240px] rounded-lg flex flex-col">
+    <div
+      onClick={handleNaviagtion}
+      className="cursor-pointer w-[30%] bg-[#FCFCFD] drop-shadow-md shadow-md h-[240px] rounded-lg flex flex-col"
+    >
       <div
         style={{ backgroundColor: bg }}
         className={`w-full h-[10%]  rounded-t-lg`}
