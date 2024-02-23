@@ -1,18 +1,17 @@
-import { useEffect } from "react";
+import Hero from "../components/home/Hero";
+import Prices from "../components/prices/Prices";
+import Services from "../components/home/Services";
+import Testimonials from "../components/home/Testimonials";
 
 const Home = () => {
-  useEffect(() => {
-    const getData = async () => {
-      const res = await fetch("http://localhost:9000/users");
-      console.log(res, "res");
-      const data = await res.data;
-      console.log(data, "data");
-    };
-
-    getData();
-  }, []);
-
-  return <div>Home</div>;
+  return (
+    <section className="w-screen min-h-screen">
+      <Hero />
+      <Services />
+      <Prices />
+      <Testimonials />
+    </section>
+  );
 };
 
 export default Home;
