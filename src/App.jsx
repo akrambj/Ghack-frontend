@@ -7,6 +7,7 @@ import ManagerLayout from "./components/manager/shared/ManagerLayout";
 import Projects from "./pages/manager/Projects";
 import Upgrade from "./pages/manager/Upgrade";
 import Support from "./pages/manager/Support";
+import Project from "./pages/manager/Project";
 
 const App = () => {
   return (
@@ -20,8 +21,9 @@ const App = () => {
           </Route>
           <Route path="/manager" element={<ManagerLayout />}>
             <Route index element={<Projects />} />
-            <Route path="/manager/upgrade" element={<Upgrade />} />
-            <Route path="/manager/upgrade" element={<Support />} />
+            <Route path="projects/:projectId" element={<Project />} />
+            <Route path="upgrade" element={<Upgrade />} />
+            <Route path="support" element={<Support />} />
           </Route>
         </Routes>
       </BrowserRouter>
