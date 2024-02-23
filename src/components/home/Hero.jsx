@@ -49,7 +49,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col gap-3 items-center  text-center">
           <p className="text-lg w-[70%] mx-auto text-[#476788]">
-            SynergySphere: Your Complete Workforce Optimization Solution,
+          HybridSphere: Your Complete Workforce Optimization Solution,
             Streamlining Communication and Collaboration Effortlessly
           </p>
           <h5>Sign up free with Google or microsoft</h5>
@@ -79,7 +79,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col items-center gap-4">
         <h5 className="text-center text-[#476788] font-semibold">
-          SynergySphere: Simplifying Managing for Over 50,000 Partner Worldwide.
+        HybridSphere: Simplifying Managing for Over 50,000 Partner Worldwide.
         </h5>
         <div className="w-full flex items-center justify-center animate-slide infinite gap-10">
           <div className="w-[25%] py-10">

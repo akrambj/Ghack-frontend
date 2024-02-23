@@ -1,6 +1,6 @@
-import Offer01 from "../prices/Offer01";
-import Offer02 from "../prices/Offer02";
-import Offer03 from "../prices/Offer03";
+import Offer01 from "./Offer01";
+import Offer02 from "./Offer02";
+import Offer03 from "./Offer03";
 
 const Prices = () => {
   return (
