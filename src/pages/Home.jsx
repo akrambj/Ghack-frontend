@@ -1,5 +1,5 @@
 import Hero from "../components/home/Hero";
-import Prices from "../components/home/Prices";
+import Prices from "../components/prices/Prices";
 import Services from "../components/home/Services";
 import Testimonials from "../components/home/Testimonials";
 

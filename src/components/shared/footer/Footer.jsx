@@ -70,7 +70,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#E7EDF6] w-full flex justify-between px-20 items-center py-3">
         <h5>Privacy Policy</h5>
-        <h5>Doctym ©2023, All right reserved.</h5>
+        <h5>HybridSphere ©2024, All right reserved.</h5>
       </div>
     </footer>
   );
