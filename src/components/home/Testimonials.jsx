@@ -57,7 +57,10 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="w-screen h-[100vh] overflow-hidden flex items-center justify-center">
+    <section
+      id="testimonials"
+      className="w-screen h-[100vh] overflow-hidden flex items-center justify-center"
+    >
       <div className="w-full relative flex items-end h-[80%] justify-center gap-5">
         {testimonials.map((item, index) => (
           <Testimonial

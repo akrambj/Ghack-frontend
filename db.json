@@ -57,12 +57,24 @@
     {
       "name": "fsdafas",
       "manager": "akram@gmail.com",
-      "features": ["Intelligent Coordinator", "Virtual Room"],
+      "features": [
+        "Intelligent Coordinator",
+        "Virtual Room"
+      ],
       "type": "owner",
       "id": 7
+    },
+    {
+      "name": "fdsaf",
+      "manager": "fsaf@gaf.com",
+      "features": [
+        "Intelligent Coordinator",
+        "Virtual Room"
+      ],
+      "type": "owner",
+      "id": 8
     }
   ],
-
   "employees": [
     {
       "id": 1,

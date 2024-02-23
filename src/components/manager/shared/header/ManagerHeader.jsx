@@ -3,13 +3,19 @@ import { Link, NavLink } from "react-router-dom";
 import profile from "../../../../assets/imgs/manager/header/profile.png";
 
 const ManagerHeader = () => {
-  const [theIndex, setTheIndex] = useState(0);
+  const [theIndex, setTheIndex] = useState(0); // Initialize theIndex with -1
   const [menu, setMenu] = useState(false);
   const menuLinks = [
     { name: "projects", link: "/dashboard" },
-    { name: "upgrade", link: "/upgrade" },
-    { name: "support", link: "/support" },
+    { name: "upgrade", link: "/dashboard/upgrade" },
+    { name: "support", link: "/dashboard/support" },
   ];
+
+  // Update theIndex when clicking on a NavLink
+  const handleNavLinkClick = (index) => {
+    setTheIndex(index);
+  };
+
   return (
     <header className="z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
       <div className="logo  w-[25%]">
@@ -23,7 +29,7 @@ const ManagerHeader = () => {
             <li key={index} className="">
               <NavLink
                 to={menu.link}
-                onClick={() => setTheIndex(index)}
+                onClick={() => handleNavLinkClick(index)} // Update theIndex on click
                 className={`text-lg capitalize cursor-pointer ${
                   index === theIndex
                     ? "text-[#006BFF] font-bold"

@@ -2,7 +2,10 @@ import Workspace from "../services/Workspace";
 
 const Services = () => {
   return (
-    <section className="w-full h-screen overflow-hidden flex flex-col justify-center items-center">
+    <section
+      id="services"
+      className="w-full h-screen overflow-hidden flex flex-col justify-center items-center"
+    >
       <div className=" flex items-center justify-center p-10 gap-10 flex-wrap bg-[#F3FAFF] drop-shadow-md shadow-sm w-[70%] mx-auto">
         <Workspace
           bg="#66DC90"
