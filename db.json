@@ -10,5 +10,49 @@
       "email": "akrambj@gmail.com",
       "password": "akramakram"
     }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Green Wave Project",
+      "desc": "48 participants",
+      "type": "Participant",
+      "deadline": "deadline in 2 days"
+    },
+    {
+      "id": 2,
+      "title": "Health Care Project",
+      "desc": "20 participants",
+      "type": "Manager",
+      "deadline": null
+    },
+    {
+      "id": 3,
+      "title": "Sport Space Project",
+      "desc": "20 participants",
+      "type": "Owner",
+      "deadline": null
+    },
+    {
+      "id": 4,
+      "title": "Green Wave Project",
+      "desc": "48 participants",
+      "type": "Participant",
+      "deadline": "deadline in 2 days"
+    },
+    {
+      "id": 5,
+      "title": "Health Care Project",
+      "desc": "20 participants",
+      "type": "Manager",
+      "deadline": null
+    },
+    {
+      "id": 6,
+      "title": "Sport Space Project",
+      "desc": "20 participants",
+      "type": "Owner",
+      "deadline": null
+    }
   ]
 }

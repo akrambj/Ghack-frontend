@@ -11,7 +11,7 @@ const ManagerHeader = () => {
     { name: "support", links: "#" },
   ];
   return (
-    <header className="fixed top-0 left-0 z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
+    <header className="z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
       <div className="logo  w-[25%]">
         <Link to={"/"} className="uppercase text-blue-600 font-bold text-3xl">
           logo
