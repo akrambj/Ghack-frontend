@@ -4,10 +4,11 @@ import ManagerFooter from "./footer/ManagerFooter";
 
 const ManagerLayout = () => {
   return (
-    <section className="w-screen min-h-screen flex flex-col justify-between">
+    <section className="w-screen flex flex-col justify-between">
       <ManagerHeader />
-      <Outlet />
-      <ManagerFooter />
+      <div className="">
+        <Outlet />
+      </div>
     </section>
   );
 };
