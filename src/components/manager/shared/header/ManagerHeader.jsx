@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import profile from "../../../../assets/imgs/manager/header/profile.png";
+import logo from "../../../../assets/imgs/header/logo.png";
 
 const ManagerHeader = () => {
   const [theIndex, setTheIndex] = useState(0); // Initialize theIndex with -1
@@ -20,7 +21,7 @@ const ManagerHeader = () => {
     <header className="z-50 w-screen flex items-center justify-between py-4 px-16  my-5  shadow-md">
       <div className="logo  w-[25%]">
         <Link to={"/"} className="uppercase text-blue-600 font-bold text-3xl">
-          logo
+          <img src={logo} className="w-32" alt="" />
         </Link>
       </div>
       <div className="nav flex items-center  w-[50%] justify-center">
