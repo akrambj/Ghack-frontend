@@ -13,46 +13,56 @@
   ],
   "projects": [
     {
-      "id": 1,
-      "title": "Green Wave Project",
-      "desc": "48 participants",
-      "type": "Participant",
-      "deadline": "deadline in 2 days"
+      "name": "Green Wave Project",
+      "manager": "fsadfsa@gmail.com",
+      "features": "Intelligent Coordinator",
+      "type": "owner",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Health Care Project",
-      "desc": "20 participants",
-      "type": "Manager",
-      "deadline": null
+      "name": "Sport Space Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "owner",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Sport Space Project",
-      "desc": "20 participants",
-      "type": "Owner",
-      "deadline": null
+      "name": "Health Care Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
     },
     {
-      "id": 4,
-      "title": "Green Wave Project",
-      "desc": "48 participants",
-      "type": "Participant",
-      "deadline": "deadline in 2 days"
+      "name": "Sport Space Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "manager",
+      "id": 2
     },
     {
-      "id": 5,
-      "title": "Health Care Project",
-      "desc": "20 participants",
-      "type": "Manager",
-      "deadline": null
+      "name": "Health Care Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
     },
     {
-      "id": 6,
-      "title": "Sport Space Project",
-      "desc": "20 participants",
-      "type": "Owner",
-      "deadline": null
+      "name": "Green Wave Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
+    },
+    {
+      "name": "fsdafas",
+      "manager": "akram@gmail.com",
+      "features": [
+        "Intelligent Coordinator",
+        "Virtual Room"
+      ],
+      "type": "owner",
+      "id": 3
     }
   ]
 }
