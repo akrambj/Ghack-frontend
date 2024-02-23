@@ -4,7 +4,10 @@ import Offer03 from "./Offer03";
 
 const Prices = () => {
   return (
-    <section className="w-full h-screen overflow-hidden flex flex-col py-5 gap-10">
+    <section
+      id="prices"
+      className="w-full h-screen overflow-hidden flex flex-col py-5 gap-10"
+    >
       <div>
         <h3 className="text-4xl font-bold text-[#0B3558] text-center">
           Choose the perfect plan for your team
