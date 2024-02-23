@@ -10,5 +10,59 @@
       "email": "akrambj@gmail.com",
       "password": "akramakram"
     }
+  ],
+  "projects": [
+    {
+      "name": "Green Wave Project",
+      "manager": "fsadfsa@gmail.com",
+      "features": "Intelligent Coordinator",
+      "type": "owner",
+      "id": 1
+    },
+    {
+      "name": "Sport Space Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "owner",
+      "id": 2
+    },
+    {
+      "name": "Health Care Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
+    },
+    {
+      "name": "Sport Space Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "manager",
+      "id": 2
+    },
+    {
+      "name": "Health Care Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
+    },
+    {
+      "name": "Green Wave Project",
+      "manager": "fdsafasf@fsdf.com",
+      "features": "Intelligent Coordinator",
+      "type": "participant",
+      "id": 2
+    },
+    {
+      "name": "fsdafas",
+      "manager": "akram@gmail.com",
+      "features": [
+        "Intelligent Coordinator",
+        "Virtual Room"
+      ],
+      "type": "owner",
+      "id": 3
+    }
   ]
 }
