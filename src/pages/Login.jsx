@@ -1,140 +1,124 @@
-import hideIcon from "../assets/eye-off.svg";
-import AuthButton from "../components/shared/UI/auth_button";
-import SocialMediaAuthButtons from "../components/shared/UI/social_media_auth_buttons";
-import loginPic from "../assets/login-pic.png";
+import { useState } from "react";
+import Input from "../components/shared/UI/Input";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { FaCheckCircle } from "react-icons/fa";
+import GoogleMicrosoftAuth from "../components/home/GoogleMicrosoftAuth";
+import logo from "../assets/imgs/login/logo.png";
 
 const Login = () => {
-  const forgotPasswordHandler = () => {
-    console.log("Forgot Password");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [created, setCreated] = useState(false);
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_REACT_API_URL;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const loginHandler = (e) => {
+  const handleLogin = async () => {
+    try {
+      setLoading(true);
+      const res = await axios.post(`${apiUrl}/auth/login`, formData);
+      if (res.status === 200) {
+        localStorage.setItem("access_token", res.data.token);
+        setLoading(false);
+        setCreated(true);
+        setTimeout(() => {
+          setCreated(false);
+          setTimeout(() => {
+            navigate("/dashboard");
+          }, 2000);
+        }, 2000);
+      }
+    } catch (err) {
+      setLoading(false);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login", e.target.email.value, e.target.password.value);
+    handleLogin();
   };
-
-  const googleAuthHandler = () => {
-    console.log("Google Auth");
-  };
-
-  const microsoftAuthHandler = () => {
-    console.log("Microsoft Auth");
-  };
-
-  const signUpHandler = () => {
-    console.log("Signup");
-  };
-
-  const hideShowPasswordHandler = () => {
-    console.log("Hide/Show Password");
-  };
-
   return (
-    <div
-      className="flex flex-row justify-between mx-52"
-      style={{
-        height: "50%",
-      }}
-    >
-      <div>
-        <div className="mb-12">
-          <div className="flex items-center justify-center m-0">
-            <div className="text-center">
-              <h1 className="font-samsung-sharp-sans text-4xl font-bold leading-10 mb-6">
-                Access to your account
-              </h1>
-            </div>
+    <section className="w-screen h-screen overflow-hidden">
+      <div className="flex justify-between px-20 w-full h-full">
+        <div className="h-full w-[45%]  flex flex-col  items-center justify-center">
+          <div className="flex flex-col gap-4 items-center">
+            <h2 className="text-[#0B3558] font-bold text-3xl">
+              Access to your account
+            </h2>
+            <p className="text-[#476788] text-base w-[70%] mx-auto text-center">
+              Easily manage your Remote work with our intuitive platform.
+            </p>
           </div>
-
-          <div className="flex items-center justify-center  m-0">
-            <div className="text-center">
-              <p className="font-samsung-sharp-sans text-lg font-medium leading-7">
-                Easily manage your Remote work with our intuitive platform.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <form className="flex flex-col" onSubmit={loginHandler}>
-          <div className="flex flex-col mb-3">
-            <label className="font-samsung-sharp-sans text-lg font-medium mb-3">
-              E-mail
-            </label>
-            <input
-              name="email"
-              type="email"
-              className="border-b-2 border-gray-400 w-auto px-9 py-6 text-lg h-14"
-              placeholder="Email adress"
-              style={{
-                borderRadius: "24px",
-                border: "1.5px solid #A6BBD1",
-                boxSizing: "border-box",
-                fontSize: "18px",
-              }}
-            />
-          </div>
-          <div className="relative flex flex-col mb-6 ">
-            <label className="font-samsung-sharp-sans text-lg font-medium mb-3">
-              <div className="flex flex-row justify-between">
-                <span> Password</span>{" "}
-                <span className="text-blue" onClick={forgotPasswordHandler}>
-                  {" "}
-                  Forgot password?{" "}
-                </span>
-              </div>
-            </label>
-
-            <input
-              name="password"
-              type="password"
-              className="border-b-2 border-gray-400 w-auto pl-9 pr-14 py-6 text-lg h-14"
-              placeholder="Password"
-              style={{
-                borderRadius: "24px",
-                border: "1.5px solid #A6BBD1",
-                boxSizing: "border-box",
-                fontSize: "18px",
-              }}
-            />
-            <button
-              type="button"
-              className="absolute right-4 bottom-3 "
-              onClick={hideShowPasswordHandler}
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+            <div
+              className={`${
+                error ? "left-0 opacity-100" : "-left-10 opacity-0"
+              } bg-red-500 absolute w-[300px] transition-all duration-300 top-0 text-white py-2 px-4 `}
             >
-              <img src={hideIcon} alt="Hide Password" />
-            </button>
-          </div>
-          <AuthButton text="Login" />
-        </form>
-        <div className="flex flex-row justify-between items-center my-12">
-          <div
-            className="border border-gray h-px "
-            style={{
-              width: "100%",
-            }}
-          ></div>
+              {error}
+            </div>
 
-          <span className="mx-2 text-gray">OR</span>
-          <div
-            className="border border-gray h-px"
-            style={{
-              width: "100%",
-            }}
-          ></div>
+            <div
+              className={`${
+                created ? "left-0 opacity-100" : "-left-10 opacity-0"
+              } absolute transition-all duration-300 top-0 bg-white drop-shadow-md shadow-md gap-2 py-4 px-10 flex items-center justify-center`}
+            >
+              <FaCheckCircle className="text-[#66DC90]" />
+              <h4 className="text-[#66DC90] font-bold text-sm">
+                Project has been created successfully
+              </h4>
+            </div>
+            <div className="relative flex flex-col gap-5">
+              <Link
+                to={"/"}
+                className="text-[#006BFF] absolute top-[55%] cursor-pointer z-20 right-[16%] font-bold"
+              >
+                Forget password ?
+              </Link>
+              <Input
+                value={formData.email}
+                name="email"
+                onChange={handleChange}
+                label="E-mail"
+                type="email"
+                placeholder="Email Adress"
+                width="70%"
+                display={"none"}
+              />
+              <Input
+                value={formData.password}
+                name="password"
+                onChange={handleChange}
+                label="Password"
+                type="password"
+                placeholder="Password"
+                width="70%"
+              />
+            </div>
+            <button className=" w-[70%] mx-auto py-3 bg-[#66DC90] rounded-xl text-white font-bold flex justify-center">
+              {loading ? <div className="spinner "></div> : "Connexion"}
+            </button>
+          </form>
+          <GoogleMicrosoftAuth />
         </div>
-        <SocialMediaAuthButtons
-          onGoogleButtonClicked={googleAuthHandler}
-          onMicrosoftButtonClicked={microsoftAuthHandler}
-        />
-        <div className="flex flex-row justify-center mt-9 text-xl ">
-          You haven’t an accout ?{" "}
-          <span className="ml-1 text-blue font-bold" onClick={signUpHandler}>
-            {"Signup"}
-          </span>
+        <div className="h-full w-[45%]  flex flex-col justify-center">
+          <img src={logo} className="w-[60%] mx-auto" alt="" />
         </div>
       </div>
-      <img src={loginPic} alt="Login" />
-    </div>
+    </section>
   );
 };
 
