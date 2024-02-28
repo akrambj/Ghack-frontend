@@ -28,7 +28,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [menuLinks]);
+  }, []);
 
   return (
     <header className="flex flex-col">
@@ -57,10 +57,16 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center gap-7 w-[25%] justify-end">
-          <Link className="bg-white drop-shadow-sm py-2 px-4 font-semibold rounded-lg">
+          <Link
+            to={"login"}
+            className="bg-white drop-shadow-sm py-2 px-4 font-semibold rounded-lg"
+          >
             Sign in
           </Link>
-          <Link className="bg-[#006BFF] text-white px-4 py-2 drop-shadow-md rounded-lg">
+          <Link
+            to={"/register"}
+            className="bg-[#006BFF] text-white px-4 py-2 drop-shadow-md rounded-lg"
+          >
             Get Started
           </Link>
         </div>

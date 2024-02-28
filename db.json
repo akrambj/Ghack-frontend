@@ -73,6 +73,16 @@
       ],
       "type": "owner",
       "id": 8
+    },
+    {
+      "name": "ddfsaf",
+      "manager": "fasdfsda@gmail.com",
+      "features": [
+        "Intelligent Coordinator",
+        "Virtual Room"
+      ],
+      "type": "owner",
+      "id": 9
     }
   ],
   "employees": [

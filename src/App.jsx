@@ -9,6 +9,7 @@ import Projects from "./pages/manager/Projects";
 import Upgrade from "./pages/manager/Upgrade";
 import Support from "./pages/manager/Support";
 import Project from "./pages/manager/Project";
+import ProtectedRoute from "./components/route/ProtectedRoute";
 
 const App = () => {
   return (
@@ -17,15 +18,50 @@ const App = () => {
         <Routes>
           <Route path="/virtual_env" index element={<VirtualEnv />} />
           <Route path="/login" index element={<Login />} />
+          <Route path="/register" index element={<Register />} />
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route index element={<Register />} />
           </Route>
-          <Route path="/dashboard" element={<ManagerLayout />}>
-            <Route index element={<Projects />} />
-            <Route path="projects/:projectId" element={<Project />} />
-            <Route path="upgrade" element={<Upgrade />} />
-            <Route path="support" element={<Support />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <ManagerLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <Projects />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="projects/:projectId"
+              element={
+                <ProtectedRoute>
+                  <Project />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="upgrade"
+              element={
+                <ProtectedRoute>
+                  <Upgrade />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="support"
+              element={
+                <ProtectedRoute>
+                  <Support />
+                </ProtectedRoute>
+              }
+            />
           </Route>
         </Routes>
       </BrowserRouter>
