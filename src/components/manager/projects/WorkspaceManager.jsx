@@ -26,14 +26,21 @@ const WorkspaceManager = ({ project }) => {
       className="cursor-pointer w-[30%] bg-[#FCFCFD] drop-shadow-md shadow-md h-[240px] rounded-lg flex flex-col"
     >
       <div
-        style={{ backgroundColor: bg }}
+        style={{ backgroundColor: "red" }}
         className={`w-full h-[10%]  rounded-t-lg`}
       ></div>
       <div className="flex flex-col gap-5 w-full h-[90%] p-5">
-        <h2 className="text-2xl font-bold">{project.name}</h2>
+        <h2 className="text-2xl font-bold">{project?.name}</h2>
         <div className="flex items-center gap-5">
           <img src={groups} alt="" />
-          <h5 className="font-semibold text-[#476788]">20 participants</h5>
+          <h5 className="font-semibold text-[#476788]">
+            {project?.members.length}{" "}
+            {project?.members.length === 1
+              ? "participant"
+              : project?.members.length === 0
+              ? "no participants"
+              : "participants"}
+          </h5>
         </div>
         <h4
           style={{ backgroundColor: bg }}

@@ -54,7 +54,6 @@ const Project = () => {
           )}
         </>
       )}
-      <ManagerFooter />
     </section>
   );
 };
