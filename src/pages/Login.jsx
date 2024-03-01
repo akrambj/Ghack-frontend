@@ -78,7 +78,7 @@ const Login = () => {
             >
               <FaCheckCircle className="text-[#66DC90]" />
               <h4 className="text-[#66DC90] font-bold text-sm">
-                Project has been created successfully
+                You have been logged in
               </h4>
             </div>
             <div className="relative flex flex-col gap-5">
