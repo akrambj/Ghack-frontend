@@ -4,9 +4,9 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full h-screen overflow-hidden flex flex-col justify-center items-center"
+      className="w-full overflow-hidden px-[10vw]"
     >
-      <div className=" flex items-center justify-center p-10 gap-10 flex-wrap bg-[#F3FAFF] drop-shadow-md shadow-sm w-[70%] mx-auto">
+      <div className="flex items-center justify-center gap-[96px] flex-wrap  bg-[#F3FAFF] mx-auto py-[8vh] rounded-[4px]">
         <Workspace
           bg="#66DC90"
           title={"Personal Workspaces"}

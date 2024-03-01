@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/login" index element={<Login />} />
           <Route path="/register" index element={<Register />} />
           <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />} />
+            {<Route index element={<Home />} />}
           </Route>
           <Route
             path="/dashboard"

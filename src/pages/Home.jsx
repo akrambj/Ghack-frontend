@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <section className="w-screen min-h-screen">
       <Hero />
+      <div className="flex flex-col gap-[20vh] py-[20vh]">
       <Services />
       <Prices />
       <Testimonials />
+      </div>
     </section>
   );
 };

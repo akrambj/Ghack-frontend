@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import test01 from "../../assets/imgs/testimonials/test01.png";
-import test02 from "../../assets/imgs/testimonials/test02.png";
-import test03 from "../../assets/imgs/testimonials/test03.png";
-import test04 from "../../assets/imgs/testimonials/test04.png";
-import test05 from "../../assets/imgs/testimonials/test05.png";
-import test06 from "../../assets/imgs/testimonials/test06.png";
+import test01 from "../../assets/imgs/testimonials/test01.webp";
+import test02 from "../../assets/imgs/testimonials/test02.webp";
+import test03 from "../../assets/imgs/testimonials/test03.webp";
+import test04 from "../../assets/imgs/testimonials/test04.webp";
+import test05 from "../../assets/imgs/testimonials/test05.webp";
+import test06 from "../../assets/imgs/testimonials/test06.webp";
 import Testimonial from "../testimonials/Testimonial";
 
 const Testimonials = () => {
@@ -59,9 +59,9 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="w-screen h-[100vh] overflow-hidden flex items-center justify-center"
+      className="w-screen overflow-hidden flex items-center justify-center"
     >
-      <div className="w-full relative flex items-end h-[80%] justify-center gap-5">
+      <div className="w-full relative flex items-end h-[80%] justify-center justify-between px-[10vw]">
         {testimonials.map((item, index) => (
           <Testimonial
             key={index}
